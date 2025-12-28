@@ -1,12 +1,12 @@
 {
-"jeans": {
+"Jeans": {
 "question": "Please select your budget (500 - 1000, 1000 - 1500, 1500 - 2000)",
 "options": {
 "500 - 1000": [{ "name": "Wrogn", "link": "https://www.wrogn.in" }],
 "1000 - 1500": [{ "name": "Levis", "link": "https://www.levi.in" }]
 }
 },
-"laptop": {
+"Laptop": {
 "question": "Please select your budget (30000 - 50000, 50000 - 80000)",
 "options": {
 "30000 - 50000": [{ "name": "HP", "link": "https://www.hp.com" }]

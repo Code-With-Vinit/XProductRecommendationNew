@@ -7,8 +7,10 @@ export function saveConversation(messages) {
 
   prev.push({
     id: Date.now(),
-    messages,
-    createdAt: new Date().toISOString()
+    messages: messages.map(m => ({
+      sender: m.sender,
+      text: m.text   // DO NOT transform case
+    }))
   });
 
   localStorage.setItem(KEY, JSON.stringify(prev));

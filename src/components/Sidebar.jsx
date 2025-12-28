@@ -4,7 +4,10 @@ export default function Sidebar({ onNew }) {
   return (
     <aside className="sidebar">
       <div className="sidebar-header">
-        <h3>Want new suggestion?</h3>
+        <Link to="/" className="secondary-btn">
+          Want new suggestion?
+        </Link>
+
         <button type="button" onClick={onNew}>＋</button>
       </div>
 
