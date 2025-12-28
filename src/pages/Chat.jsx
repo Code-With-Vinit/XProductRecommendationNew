@@ -4,6 +4,7 @@ import ChatMessage from "../components/ChatMessage";
 import ChatInput from "../components/ChatInput";
 import { getBotReply } from "../utils/getBotReply";
 import { saveConversation } from "../utils/storage";
+import ChatHeader from "../components/ChatHeader";
 
 
 export default function Chat() {
@@ -45,7 +46,8 @@ return (
 
 
 <div className="chat-area">
-<h1>Product Recommendation AI</h1>
+    <ChatHeader />
+{/* <h1>Product Recommendation AI</h1> */}
 
 
 {messages.length === 0 && (
@@ -58,6 +60,8 @@ return (
 ))}
 
 <ChatInput onSend={sendMessage} />
+
+
 </div>
 </div>
 );

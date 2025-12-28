@@ -4,9 +4,9 @@ import ThemeToggle from "./ThemeToggle";
 export default function ChatHeader() {
 
   return (
-    <div className="chat-header">
+    <header className="chat-header">
       <h1>Product Recommendation AI</h1>
       <ThemeToggle />
-    </div>
+    </header>
   );
 }

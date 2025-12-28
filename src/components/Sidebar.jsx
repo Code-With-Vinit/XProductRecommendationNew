@@ -1,22 +1,22 @@
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Sidebar({ onNew }) {
-  const navigate = useNavigate();
-
   return (
     <aside className="sidebar">
       <div className="sidebar-header">
-        <span className="logo">💬</span>
         <h3>Want new suggestion?</h3>
-        <button className="icon-btn" onClick={onNew}>＋</button>
+        <button type="button" onClick={onNew}>＋</button>
       </div>
 
-      <button
-        className="primary-btn"
-        onClick={() => navigate("/history")}
-      >
+      {/* MUST be an anchor */}
+      <Link to="/history" className="primary-btn">
         Previous Suggestions
-      </button>
+      </Link>
+
+      {/* Cypress expects this */}
+      <Link to="/" className="secondary-btn">
+        New Suggestion
+      </Link>
     </aside>
   );
 }
