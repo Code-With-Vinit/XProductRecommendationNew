@@ -21,9 +21,7 @@ export default function ChatInput({ onSend }) {
 
       {/* ONLY ONE submit */}
       <button type="submit">Ask</button>
-      <button type="button">
-        Save
-      </button>
+      
     </form>
   );
 }

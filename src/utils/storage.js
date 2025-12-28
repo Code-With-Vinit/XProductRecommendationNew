@@ -1,19 +1,20 @@
-const KEY = "conversations";
+const KEY = "pastConversations";
 
 export function saveConversation(messages) {
   if (!messages || messages.length === 0) return;
 
-  const prev = JSON.parse(localStorage.getItem(KEY)) || [];
+  const existing =
+    JSON.parse(localStorage.getItem(KEY)) || [];
 
-  prev.push({
+  existing.push({
     id: Date.now(),
     messages: messages.map(m => ({
       sender: m.sender,
-      text: m.text   // DO NOT transform case
+      text: m.text
     }))
   });
 
-  localStorage.setItem(KEY, JSON.stringify(prev));
+  localStorage.setItem(KEY, JSON.stringify(existing));
 }
 
 export function getConversations() {
